@@ -13,7 +13,7 @@
     <!-- sytle sheet  -->
     <link rel="stylesheet" href="styles.css">
     <title>Select Player</title>
-    
+
 </head>
 <body class="bg-slate-900">
     <!-- start heading  -->
@@ -23,7 +23,7 @@
                 <img src="images/mesi-cover.png" alt="">
             </div>
             <div class="my-auto">
-                <h1 class="text-5xl font-bold italic text-orange-600 font-mono">Select Your Top Five</h1>
+                <h1 class="text-5xl font-bold text-orange-600">Choice Your Top Five</h1>
                 <p class="text-white mt-6">We are probably familiar with the list of best soccer player in the world. <br> Those are legendary names like Diego Maradona or Zinedine Zidane.<br> Select your top five footballer.</p>
             </div>
         </div>
@@ -125,13 +125,20 @@
                 <!-- start budget section  -->
                 <div class="text-white border border-black border-2 rounded bg-black p-4">
                     <h3 class="text-2xl font-bold text-center mb-4">Budget</h3>
-                    <h4 class="mr-5">Per Player <input class="py-1 mx-5 text-black" type="text" maxlength="13" size="13"></h4>
-                    <button class="bg-blue-600 px-20 py-2 rounded my-4 font-medium hover:bg-blue-800">Calculate</button>
-                    <h3 class="">Player Expenses: <span class="ml-5">$<span>00</span> </span></h3>
-                    <h4 class="mr-5 mt-3">Manager <input class="py-1 mx-5 text-black" type="text" maxlength="13" size="13"></h4>
-                    <h4 class="px-5 mt-3">Coach <input class="py-1 mx-5 text-black" type="text" maxlength="13" size="13"></h4>
-                    <button class="bg-blue-600 px-16 py-2 rounded my-4 font-medium hover:bg-blue-800">Calculate Total</button>
-                    <h3 class="">Total: <span class="ml-5">$<span>00</span> </span></h3>
+
+                    <h4 class="mr-5">Per Player <input id="player-cost" class="py-1 mx-5 text-black" type="text" maxlength="13" size="13"></h4>
+
+                    <button id="btn-calculate" class="bg-blue-600 px-20 py-2 rounded my-4 font-medium hover:bg-blue-800">Calculate</button>
+
+                    <h3>Player Expenses: <span class="ml-5">$<span id="player-expenses">00</span> </span></h3>
+
+                    <h4 class="mr-5 mt-3">Manager <input id="manager" class="py-1 mx-5 text-black" type="text" maxlength="13" size="13"></h4>
+
+                    <h4 class="px-5 mt-3">Coach <input id="coach" class="py-1 mx-5 text-black" type="text" maxlength="13" size="13"></h4>
+
+                    <button id="calculate-total" class="bg-blue-600 px-16 py-2 rounded my-4 font-medium hover:bg-blue-800">Calculate Total</button>
+
+                    <h3 class="">Total: <span class="ml-5">$<span id="total-cost">00</span> </span></h3>
                 </div>
                 <!-- end budget section  -->
             </div>

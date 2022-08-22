@@ -24,6 +24,37 @@ function playerName(element){
     displayName(playersName);
 }
 
+document.getElementById('btn-calculate').addEventListener('click',function(){
+    const perPlayerCost = document.getElementById('player-cost');
+    const perPlayerCostString = perPlayerCost.value;
+    const playerCost = parseFloat(perPlayerCostString);
+
+    const selectPlayerName = document.getElementById('select-five');
+    const selectedPlayerLength = selectPlayerName.getElementsByTagName('li').length;
+
+    const playerExpensesField = document.getElementById('player-expenses');
+    const playerExpenses = playerCost * selectedPlayerLength;
+    playerExpensesField.innerText = playerExpenses;
+})
+
+document.getElementById('calculate-total').addEventListener('click',function(){
+    const managerField = document.getElementById('manager');
+    const managerTextString = managerField.value;
+    const mangerCost = parseFloat(managerTextString);
+
+    const coachField = document.getElementById('coach');
+    const coachTextString = coachField.value;
+    const coachCost = parseFloat(coachTextString);
+
+    const playerExpensesField = document.getElementById('player-expenses');
+    const playerExpenseString = playerExpensesField.innerText;
+    const playerExpenses = parseInt(playerExpenseString); 
+
+    const totalCostField = document.getElementById('total-cost');
+    const totalCost = playerExpenses + mangerCost + coachCost;
+    totalCostField.innerText = totalCost;
+})
+
 
 
 
